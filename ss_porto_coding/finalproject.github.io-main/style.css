@@ -1,0 +1,80 @@
+.container{
+    background-color:wheat;
+    height: 950px;
+}
+
+.background{
+height: 100px;
+width: 1424px;
+}
+
+.font-color{
+    background: linear-gradient(to bottom,#2980b9,#2c3e50);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  
+  .content div{
+    padding: 5px 0;
+  }
+  
+  .timeDiv{
+    float: left;
+    position:relative;
+  }
+  
+  #time{
+    text-shadow: 0 0 55px #2980b9;
+    font-size: 4.5rem;
+  }
+  
+  #med{
+    position:absolute;
+    top: 15px;
+    right: 0;
+  }
+  
+  .dayDiv{
+    display: flex;
+  }
+  
+  .dayDiv span{
+    font-size: 0.9rem;
+    opacity: 0.4;
+    margin:0 4px;
+  }
+
+header{
+    margin-top: auto; 
+}
+
+header img{
+    width: 1110px;
+    height: 300px;
+}
+menu{
+    background-color:rgb(59, 69, 70);
+    padding:  10px 1px;
+    height: 50px;
+}
+menu ul {
+    list-style: none;
+    display: flex;
+}
+menu ul li a{
+    float:left;
+    text-decoration: none;
+    color:whitesmoke;
+    padding: 1px 75px;
+    line-height: center;
+    transition: 0.2s;
+
+}
+
+h1 {
+    text-align: center;
+}
+footer{
+    text-align: center;
+}

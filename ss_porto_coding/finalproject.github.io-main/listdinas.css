@@ -1,0 +1,48 @@
+.background{
+    background-color: whitesmoke;
+}
+
+header{
+    margin-top: auto; 
+}
+
+header img{
+    width: 1424px;
+    height: 300px;
+}
+menu{
+    background-color:rgb(59, 69, 70);
+    padding:  10px 1px;
+    height: 50px;
+}
+menu ul {
+    list-style: none;
+    display: flex;
+}
+menu ul li a{
+    float:left;
+    text-decoration: none;
+    color:whitesmoke;
+    padding: 1px 100px;
+    line-height: center;
+    transition: 0.2s;
+
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    position:fixed;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+
+footer{
+    text-align: center;
+}

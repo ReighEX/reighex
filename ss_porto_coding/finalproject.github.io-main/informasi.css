@@ -1,0 +1,100 @@
+
+.background{
+    background-color: whitesmoke;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header{
+    margin-top: auto; 
+}
+
+header img{
+    width: 1424px;
+    height: 300px;
+}
+menu{
+    background-color:rgb(59, 69, 70);
+    padding:  10px 1px;
+    height: 50px;
+}
+menu ul {
+    list-style: none;
+    display: flex;
+}
+menu ul li a{
+    float:left;
+    text-decoration: none;
+    color:whitesmoke;
+    padding: 1px 98.5px;
+    line-height: center;
+    transition: 0.2s;
+    position: relative;
+    width: 80px;
+    height: 100px;
+
+}
+
+.box {
+    padding: 1rem;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.box-heading, .box-add, .box-table {
+    width: 100%;
+}
+.box-heading{
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    margin-bottom: .5rem;
+    color: black;
+}
+.box-add {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    margin-bottom: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box-add input {
+    width: 75%;
+}
+.box-add .btn-todo{
+    width: 25%;
+    padding: 3px;
+    background-color:rgb(62, 93, 150);
+    color: #ffffff;
+}
+.box-table{
+    text-align: center;
+    
+}
+table {
+    width: 100%;
+    border-radius: 10px;
+}
+.box-table th, .box-table td{
+    padding: .25rem;
+    border-radius: 5px;
+    color: black;
+}
+.btn {
+    padding: .25rem;
+    border: none;
+}
+.btn-blue{
+    background-color: cornflowerblue;
+    color: #ffffff;
+}

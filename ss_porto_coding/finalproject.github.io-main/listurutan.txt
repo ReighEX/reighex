@@ -1,0 +1,8 @@
+Boostrap > Done
+
+Jquery > DONE
+Jquery CSS Plugin > DONE
+
+JS > DONE
+JS DOM > DONE	
+JS Jquery Plugin > DONE
