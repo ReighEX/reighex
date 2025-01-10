@@ -10,10 +10,6 @@ body {
 .portfolio-category {
     margin-bottom: 20px;
 }
-.portfolio-items {
-    display: flex;
-    flex-wrap: wrap;
-}
 .portfolio-item {
     margin: 10px;
 }
@@ -35,6 +31,11 @@ body {
     margin: 0 auto; /* Memastikan elemen berada di tengah */
     width: fit-content; /* Ukuran menyesuaikan konten */
 }
+
+.github-details { 
+    margin-top: 20px; /* Atur jarak sesuai kebutuhan Anda */ 
+}
+
 #portfolio .portfolio-item img {
     display: block;
     margin-bottom: 1em; /* Jarak antara gambar dan tombol */
@@ -53,14 +54,6 @@ body {
 #portfolio .portfolio-item.center-content button {
     display: block;
     margin: 0 auto; /* Untuk memastikan elemen benar-benar berada di tengah */
-}
-
-.center-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;   /* Agar elemen berada di tengah horizontal */
-    justify-content: center; /* Agar elemen berada di tengah vertikal */
-    text-align: center;
 }
 
 .center-button {
@@ -124,6 +117,12 @@ h1, p, button {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    opacity: 1;
 }
 
 .modal-content {
@@ -173,8 +172,8 @@ h1, p, button {
 
 .contact-list img { 
     margin-left: 5px; /* Jarak ikon dari teks sebelumnya */ 
-    width: 20px; /* Ukuran ikon lebih kecil */ 
-    height: 20px; 
+    width: 50px; /* Ukuran ikon lebih kecil */ 
+    height: 50px; 
     object-fit: contain; 
     cursor: pointer; 
 }
@@ -203,12 +202,6 @@ button:hover {
     margin-top: -5px; /* Sesuaikan nilai margin negatif sesuai kebutuhan */ 
 }
 
-.contact-list img {
-    width: 40px;
-    height: 40px; /* Proporsional untuk semua layar */
-    cursor: pointer;
-}
-
 li {
     margin: 10px 0;
 }
@@ -222,8 +215,12 @@ li {
 /* Untuk layar kecil (ponsel) */
 @media (max-width: 767px) {
     .contact-list, .portfolio-items, .center-content {
+        display: flex;
         flex-direction: column; /* Tumpuk elemen secara vertikal */
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
+        gap: 20px;
     }
     .contact-list li, .portfolio-item {
         margin: 10px 0;

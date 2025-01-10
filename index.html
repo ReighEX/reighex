@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alyan's Portfolio</title>
-    <link rel="icon" href="path/to/favicon.ico">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -16,12 +15,12 @@
     </header>
     <main>
         <section id="profile">
-            <img src="fotosaya.JPG" alt="Profile Photo" class="profile-photo">
+            <img src="assets/images/fotosaya.JPG" alt="Profile Photo" class="profile-photo">
 
             <h1>Profile</h1>
             <p>Overview of my profile with a download button linking to CV on Google Drive.</p>
-            <a href="https://drive.google.com/file/d/1d8S5X6Kbw-smnuuDcyxi32lkyiQvU3xK/view" target="_blank"> 
-                <button>Download CV</button> 
+            <a href="https://drive.google.com/file/d/1d8S5X6Kbw-smnuuDcyxi32lkyiQvU3xK/view" target="_blank" class="btn btn-primary"> 
+                Download CV
             </a>
         </section>
         
@@ -32,12 +31,15 @@
                 <div class="portfolio-items">
                     <div class="portfolio-item center-content">
                         <img src="ss_porto_coding/sibadra.png" alt="Coding Project 1 Screenshot">
+                        <div class="github-details">
                         <a href="https://reighex.github.io/finalproject.github.io/" target="_blank">
                         <button>View details on GitHub</button>
                         </a>
                         </div>
+                        </div>
                 </div>
             </div>
+
             <div class="portfolio-category center-text">
                 <div id="myModal" class="modal"> 
                     <span class="close">&times;
@@ -53,13 +55,6 @@
                         </div>
                     </div>
         </section>
-        
-
-        <section id="linkedin">
-            <h1>LinkedIn</h1>
-            <p>If you want to see more details about me, click the LinkedIn link below.</p>
-            <button onclick="window.location.href='link_to_linkedin'">LinkedIn</button>
-        </section>
 
         <section id="certifications">
             <h1>Certifications</h1>
@@ -72,12 +67,12 @@
             <h1>Contact Me</h1>
             <ul class="contact-list flex-center">
                 <li class="email-item">Email: alyanrizky@gmail.com</li>
-                <li>WhatsApp: <a href="https://api.whatsapp.com/send?phone=6282260717739" target="_blank">
-                    <img src="whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon">
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/alyanrizky/" target="_blank" aria-label="Connect via LinkedIn">
+                    <img src="assets/images/linkedin-icon.jpeg" alt="LinkedIn" class="linkedin-icon">
                 </a>
                 </li>
-                <li>GitHub: <a href="https://github.com/ReighEX" target="_blank">
-                    <img src="github-icon.png" alt="GitHub" class="github-icon">
+                <li>GitHub: <a href="https://github.com/ReighEX" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/images/github-icon.png" alt="GitHub" class="github-icon">
                     </a>
                 </li>
                 <!-- Additional contact details -->
@@ -88,7 +83,7 @@
     <footer>
         <!-- Footer content -->
     </footer>
-    <script src="scripts.js"></script>
-    <script src="bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+    <script src="assets/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
