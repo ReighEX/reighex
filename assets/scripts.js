@@ -10,27 +10,31 @@ document.addEventListener('DOMContentLoaded', function() {
     }); */
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    var modal = document.getElementById("myModal");
-    var modalImg = document.getElementById("img01");
-    var span = document.getElementsByClassName("close")[0];
+var modal = document.getElementById("imageModal");
+var modalImg = document.getElementById("modalImage");
+var captionText = document.getElementById("caption");
+var closeBtn = document.getElementsByClassName("close")[0];
 
-    var img1 = document.getElementById("myPhoto1");
-    var img2 = document.getElementById("myPhoto2");
+// Ambil semua gambar dengan kelas 'photo'
+var photos = document.querySelectorAll('.photo');
 
-    img1.onclick = function() {
+// Ketika gambar diklik, tampilkan modal
+photos.forEach(photo => {
+    photo.onclick = function() {
         modal.style.display = "block";
-        modalImg.src = this.src;
-    }
-
-    img2.onclick = function() {
-        modal.style.display = "block";
-        modalImg.src = this.src;
-    }
-
-    span.onclick = function() {
-        modal.style.display = "none";
+        modalImg.src = this.src; // Set gambar modal dengan gambar yang diklik
+        captionText.innerHTML = this.alt; // Menampilkan teks keterangan gambar
     }
 });
 
+// Ketika pengguna menekan tombol close, sembunyikan modal
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+}
 
+// Ketika pengguna klik di luar modal, sembunyikan modal
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
