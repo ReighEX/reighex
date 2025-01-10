@@ -10,8 +10,15 @@ body {
 .portfolio-category {
     margin-bottom: 20px;
 }
+.portfolio-items {
+    display: flex; /* Flexbox membuat elemen di dalamnya tampil berurutan secara horizontal */
+    gap: 20px; /* Jarak antar gambar, bisa sesuaikan sesuai kebutuhan */
+    justify-content: left; /* Memastikan gambar berada di tengah */
+    margin-bottom: 30px; /* Jarak tambahan di bawah gambar Blender */
+}
 .portfolio-item {
-    margin: 10px;
+    display: inline-block;
+    width: auto; /* Biarkan lebar gambar mengikuti ukuran asli */
 }
 .portfolio-item img {
     max-width: 100%; /* Pastikan gambar tetap responsif */
@@ -207,12 +214,11 @@ li {
     margin: 10px 0;
 }
 
-/* Responsive Styles */
-/* Global Styles */
+
+/* Responsive & Global Styles */
 .contact-list li, .portfolio-item {
     margin: 10px 0; /* Berlaku untuk semua layar */
 }
-
 /* Untuk layar kecil (ponsel) */
 @media (max-width: 767px) {
     .contact-list, .portfolio-items, .center-content {
