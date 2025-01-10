@@ -12,11 +12,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener("DOMContentLoaded", function() {
     var modal = document.getElementById("myModal");
-    var img = document.getElementById("myPhoto");
     var modalImg = document.getElementById("img01");
     var span = document.getElementsByClassName("close")[0];
 
-    img.onclick = function() {
+    var img1 = document.getElementById("myPhoto1");
+    var img2 = document.getElementById("myPhoto2");
+
+    img1.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+    }
+
+    img2.onclick = function() {
         modal.style.display = "block";
         modalImg.src = this.src;
     }
@@ -25,4 +32,5 @@ document.addEventListener("DOMContentLoaded", function() {
         modal.style.display = "none";
     }
 });
+
 

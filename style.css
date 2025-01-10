@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .center-text {
     text-align: center;
 }
@@ -17,10 +18,52 @@ body {
     margin: 10px;
 }
 .portfolio-item img {
+    max-width: 100%; /* Pastikan gambar tetap responsif */
+    height: auto;
+    margin-bottom: 10px; /* Jarak antara gambar dan tombol */
+}
+.portfolio-item button {
+    margin-top: 10px; /* Jarak tombol dari elemen sebelumnya */
+}
+
+#portfolio .portfolio-item.center-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto; /* Memastikan elemen berada di tengah */
+    width: fit-content; /* Ukuran menyesuaikan konten */
+}
+#portfolio .portfolio-item img {
+    display: block;
+    margin-bottom: 1em; /* Jarak antara gambar dan tombol */
     max-width: 100%;
     height: auto;
 }
-.portfolio-item button {
+
+#portfolio .portfolio-item button {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    text-align: center;
+}
+
+#portfolio .portfolio-item.center-content img,
+#portfolio .portfolio-item.center-content button {
+    display: block;
+    margin: 0 auto; /* Untuk memastikan elemen benar-benar berada di tengah */
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* Agar elemen berada di tengah horizontal */
+    justify-content: center; /* Agar elemen berada di tengah vertikal */
+    text-align: center;
+}
+
+.center-button {
     display: block;
     margin: 10px auto;
 }
@@ -52,7 +95,7 @@ section {
     text-align: center;
 }
 
-#profile h1, #profile p, #profile button {
+h1, p, button {
     margin: 0.5em 0;
 }
 
@@ -103,11 +146,38 @@ section {
     cursor: pointer;
 }
 
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.contact-list {
+    display: flex; 
+    justify-content: center; /* Rata tengah horizontal */ 
+    align-items: center; /* Rata tengah vertikal */ 
+    list-style-type: none; 
+    padding: 10px 0; /* Tambahkan ruang atas dan bawah */
+    margin: 0 auto; /* Agar container selalu di tengah */ 
+    flex-wrap: wrap; /* Membuat elemen membungkus jika layar sempit */ 
+    max-width: 90%; /* Membatasi lebar maksimal container */
+    gap: 20px; /* Tambahkan gap untuk jarak antar elemen */
+}
 
-/* CSS untuk menengahkan bagian profil */ 
-#profile { display: flex; flex-direction: column; align-items: center; text-align: center; } 
-#profile h1, #profile p, #profile button { margin: 0.5em 0; }
+.contact-list li { 
+    display: flex; 
+    align-items: center; /* Rata tengah ikon dan teks */ 
+    margin: 10px; /* Jarak antar elemen */ 
+    text-align: center; /* Agar teks selalu di tengah */ 
+}
+
+.contact-list img { 
+    margin-left: 5px; /* Jarak ikon dari teks sebelumnya */ 
+    width: 20px; /* Ukuran ikon lebih kecil */ 
+    height: 20px; 
+    object-fit: contain; 
+    cursor: pointer; 
+}
 
 h1 {
     font-size: 1.5em;
@@ -121,28 +191,63 @@ button {
     padding: 0.5em 1em;
     border-radius: 4px;
     cursor: pointer;
+    width: auto;
+    max-width: 100%; /* Agar tombol tidak melewati lebar layar */
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
+.email-item { 
+    margin-top: -5px; /* Sesuaikan nilai margin negatif sesuai kebutuhan */ 
+}
+
+.contact-list img {
+    width: 40px;
+    height: 40px; /* Proporsional untuk semua layar */
+    cursor: pointer;
+}
+
+li {
+    margin: 10px 0;
+}
+
 /* Responsive Styles */
-@media (max-width: 600px) {
-    main {
-        padding: 1em;
+/* Global Styles */
+.contact-list li, .portfolio-item {
+    margin: 10px 0; /* Berlaku untuk semua layar */
+}
+
+/* Untuk layar kecil (ponsel) */
+@media (max-width: 767px) {
+    .contact-list, .portfolio-items, .center-content {
+        flex-direction: column; /* Tumpuk elemen secara vertikal */
+        align-items: center;
+    }
+    .contact-list li, .portfolio-item {
+        margin: 10px 0;
+    }
+}
+
+/* Untuk layar sedang (tablet) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .contact-list {
+        flex-wrap: wrap; /* Bungkus elemen jika layar tidak cukup lebar */
     }
 
-    section {
-        padding: 0.5em;
+    .contact-list li {
+        margin: 10px 15px; /* Tambahkan jarak horizontal */
+    }
+}
+
+/* Untuk layar besar (desktop) */
+@media (min-width: 1200px) {
+    .contact-list {
+        justify-content: space-around; /* Beri lebih banyak ruang antar elemen */
     }
 
-    h1 {
-        font-size: 1.2em;
-    }
-
-    button {
-        width: 100%;
-        padding: 1em;
+    .contact-list li {
+        margin: 0 20px; /* Sedikit jarak antar elemen */
     }
 }
