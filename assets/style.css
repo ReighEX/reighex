@@ -59,6 +59,43 @@ body {
     display: block;
     width: 80%;
     max-width: 700px; /* Maksimal lebar gambar */
+    cursor: grab; /* Menampilkan ikon tangan untuk memberi petunjuk kepada pengguna */
+}
+
+.modal-content:active {
+    cursor: grabbing; /* Menampilkan ikon grabbing saat gambar di-drag */
+}
+
+.modal-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.modal-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+#prevBtn {
+    left: 10px; /* Posisi tombol panah kiri */
+}
+
+#nextBtn {
+    right: 10px; /* Posisi tombol panah kanan */
+}
+
+.modal-btn:hover {
+    color: #bbb; /* Warna berubah saat hover */
 }
 
 .close {

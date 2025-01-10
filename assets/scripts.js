@@ -15,26 +15,48 @@ var modalImg = document.getElementById("modalImage");
 var captionText = document.getElementById("caption");
 var closeBtn = document.getElementsByClassName("close")[0];
 
-// Ambil semua gambar dengan kelas 'photo'
 var photos = document.querySelectorAll('.photo');
+var currentIndex = 0; // Variabel untuk menyimpan indeks gambar yang sedang ditampilkan
 
-// Ketika gambar diklik, tampilkan modal
-photos.forEach(photo => {
+// Menampilkan gambar yang diklik dalam modal
+photos.forEach((photo, index) => {
     photo.onclick = function() {
         modal.style.display = "block";
-        modalImg.src = this.src; // Set gambar modal dengan gambar yang diklik
-        captionText.innerHTML = this.alt; // Menampilkan teks keterangan gambar
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+        currentIndex = index; // Menyimpan indeks gambar yang diklik
     }
 });
 
-// Ketika pengguna menekan tombol close, sembunyikan modal
+// Fungsi untuk menampilkan gambar berikutnya atau sebelumnya
+function showImage(index) {
+    if (index < 0) index = photos.length - 1; // Jika index negatif, kembali ke gambar terakhir
+    if (index >= photos.length) index = 0; // Jika index melebihi jumlah gambar, kembali ke gambar pertama
+    modalImg.src = photos[index].src;
+    captionText.innerHTML = photos[index].alt;
+    currentIndex = index;
+}
+
+// Tombol Close
 closeBtn.onclick = function() {
     modal.style.display = "none";
 }
 
-// Ketika pengguna klik di luar modal, sembunyikan modal
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+// Tombol Panah Kiri
+document.getElementById("prevBtn").onclick = function() {
+    showImage(currentIndex - 1); // Tampilkan gambar sebelumnya
 }
+
+// Tombol Panah Kanan
+document.getElementById("nextBtn").onclick = function() {
+    showImage(currentIndex + 1); // Tampilkan gambar berikutnya
+}
+
+// Fungsi untuk tombol keyboard panah kiri dan kanan
+window.addEventListener("keydown", function(event) {
+    if (event.key === "ArrowLeft") {
+        showImage(currentIndex - 1); // Tampilkan gambar sebelumnya
+    } else if (event.key === "ArrowRight") {
+        showImage(currentIndex + 1); // Tampilkan gambar berikutnya
+    }
+});
