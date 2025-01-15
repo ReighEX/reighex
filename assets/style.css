@@ -11,9 +11,10 @@ body {
     margin-bottom: 20px;
 }
 .portfolio-items {
-    display: flex; /* Flexbox membuat elemen di dalamnya tampil berurutan secara horizontal */
-    gap: 20px; /* Jarak antar gambar, bisa sesuaikan sesuai kebutuhan */
-    justify-content: left; /* Memastikan gambar berada di tengah */
+    display: flex; /* Tetap menggunakan Flexbox */
+    flex-wrap: wrap; /* Agar elemen membungkus jika terlalu panjang */
+    justify-content: center; /* Atur elemen menjadi rata tengah */
+    gap: 20px; /* Jarak antar elemen tetap terjaga */
     margin-bottom: 30px; /* Jarak tambahan di bawah gambar Blender */
 }
 .portfolio-item {
