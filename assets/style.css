@@ -40,6 +40,20 @@ body {
     width: fit-content; /* Ukuran menyesuaikan konten */
 }
 
+.github-details {
+    display: flex; /* Mengatur elemen anak dalam satu baris */
+    align-items: center; /* Menyelaraskan teks dan tombol secara vertikal */
+    gap: 10px; /* Jarak antara teks dan tombol */
+}
+
+.github-details a {
+    display: inline-block; /* Memastikan tombol tetap inline */
+}
+
+.github-details button {
+    margin: 0; /* Hilangkan margin default pada tombol */
+}
+
 /* Modal Styles */
 .modal {
     display: none; /* Secara default, modal disembunyikan */
@@ -215,7 +229,9 @@ h1, p, button {
     margin: 10px; /* Jarak antar elemen */ 
     text-align: center; /* Agar teks selalu di tengah */ 
 }
-
+.contact-list li a {
+    margin-left: 5px; /* Tambahkan spasi antara teks dan link */
+}
 .contact-list img { 
     margin-left: 5px; /* Jarak ikon dari teks sebelumnya */ 
     width: 50px; /* Ukuran ikon lebih kecil */ 
@@ -229,12 +245,13 @@ h1 {
     margin-bottom: 0.5em;
 }
 
-button {
+.rounded-button {
     background-color: #007bff;
     color: white;
     border: none;
+    border-radius: 12px;
     padding: 0.5em 1em;
-    border-radius: 4px;
+    padding-left: 0.9em;
     cursor: pointer;
     width: auto;
     max-width: 100%; /* Agar tombol tidak melewati lebar layar */
