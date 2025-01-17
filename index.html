@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alyan's Portfolio</title>
-    <link rel="icon" href="assets/images/user-tie-solid.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/images/user-tie-solid.svg" type="image/svg+xml"> -->
     <link rel="stylesheet" href="assets/style.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="fontawesome-free-6.7.2-web/css/all.min.css">
+
 </head>
 <body>
     <header>
@@ -22,7 +26,7 @@
             <h1>Profile</h1>
             <p>Overview of my profile with a download button linking to CV on Google Drive.</p>
             <p>Click here : <a href="https://drive.google.com/file/d/1d8S5X6Kbw-smnuuDcyxi32lkyiQvU3xK/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                <button class="rounded-button"><img src="assets/images/googledrive-icon.png"> Google Drive</button>                  
+                <button class="rounded-button"><i class="fa-brands fa-google-drive"></i> Google Drive</button>                  
                </a></p>
         </section>
         
@@ -34,7 +38,7 @@
                     <div class="portfolio-item center-content">
                         <img src="ss_porto_coding/sibadra.png" alt="Coding Project 1 Screenshot">
                         <div class="github-details">
-                        <p class="github-details"> Click here for more details : <a href="https://reighex.github.io/finalproject.github.io/" target="_blank" rel="noopener noreferrer">
+                        <p class="github-details"> Click here to view on : <a href="https://github.com/ReighEX" target="_blank" rel="noopener noreferrer">
                         <button class="rounded-button"><i class="fa-brands fa-github"></i> Github</button>
                         </a></p>
                         </div>
@@ -44,9 +48,9 @@
             <div id="imageModal" class="modal">
                 <span class="close">&times;</span>
                 <div class="modal-nav">
-                    <button id="prevBtn" class="modal-btn"><</button> <!-- Tombol Panah Kiri -->
+                    <button id="prevBtn" class="modal-btn" aria-label="Previous Image"><</button> <!-- Tombol Panah Kiri -->
                     <img class="modal-content" id="modalImage">
-                    <button id="nextBtn" class="modal-btn">></button> <!-- Tombol Panah Kanan -->
+                    <button id="nextBtn" class="modal-btn" aria-label="Next Image">></button> <!-- Tombol Panah Kanan -->
                 </div>
                 <div id="caption"></div>
             </div>
@@ -54,47 +58,117 @@
                 <h2>Blender (Modelling)</h2>
                 <div class="portfolio-items">
                     <div class="portfolio-item">
+                        <p>Mug</p>
                         <img src="ss_porto_modelling/mug.png" alt="Blender 3D model mug" class="photo">
-                        <a href="https://github.com/ReighEX/myportofolio/blob/main/ss_porto_modelling/mug.png" target="_blank" rel="noopener noreferrer">
-                            <button class="rounded-button"><i class="fa-brands fa-github"></i> Github</button>
-                            </a>
                         </div>
                         <div class="portfolio-item">
+                            <p>Product</p>
                             <img src="ss_porto_modelling/produk.png" alt="Blender 3D model produk" class="photo">
-                             <a href="https://github.com/ReighEX/myportofolio/blob/main/ss_porto_modelling/produk.png" target="_blank" rel="noopener noreferrer">
-                                <button class="rounded-button"><i class="fa-brands fa-github"></i> Github</button>
-                                </a>
                         </div>
                         <div class="portfolio-item">
+                            <p>Character</p>
                         <img src="ss_porto_modelling/character.png" alt="Blender 3D model character" class="photo">
-                        <a href="https://github.com/ReighEX/myportofolio/blob/main/ss_porto_modelling/character.png" target="_blank" rel="noopener noreferrer">
-                            <button class="rounded-button"><i class="fa-brands fa-github"></i> Github</button>
-                            </a>
                     </div>
                     <div class="portfolio-item">
+                        <p>Gundam (Prototype)</p>
                         <img src="ss_porto_modelling/gundamprototype.png" alt="Blender 3D model gundamprototype" class="photo">
-                        <a href="https://github.com/ReighEX/myportofolio/blob/main/ss_porto_modelling/gundamprototype.png" target="_blank" rel="noopener noreferrer">
-                            <button class="rounded-button"><i class="fa-brands fa-github"></i> Github</button>
-                            </a>
                     </div>
                     <div class="portfolio-item">
+                        <p>Gundam (Completed)</p>
                         <img src="ss_porto_modelling/gundam.png" alt="Blender 3D model gundam" class="photo">
-                        <a href="https://github.com/ReighEX/myportofolio/blob/main/ss_porto_modelling/gundam.png" target="_blank" rel="noopener noreferrer">
+                        <!-- <a href="https://github.com/ReighEX/myportofolio/blob/main/ss_porto_modelling/gundam.png" target="_blank" rel="noopener noreferrer">
                             <button class="rounded-button"><i class="fa-brands fa-github"></i> Github</button>
-                            </a>
+                            </a> -->
                     </div>
                 </div>
-                <p>Click here to view on : <a href="https://github.com/ReighEX/myportofolio/tree/main/ss_porto_modelling" target="_blank" rel="noopener noreferrer">
+                <p>Click here to view on : <a href="https://github.com/ReighEX" target="_blank" rel="noopener noreferrer">
                     <button class="rounded-button"><i class="fa-brands fa-github"></i> Github</button>
                     </a></p>
 
-                <h2>Blender (Animations, Lip Sync, etc)</h2>
+                <h2>Blender Animations</h2>
+                <h4>(With Voice or Lip Sync)</h4>
                 <div class="portfolio-items">
                     <div class="portfolio-item">
-                    <p>Click here for more details : <a href="https://github.com/ReighEX/myportofolio/tree/main/animation_render_outputs" target="_blank" rel="noopener noreferrer">
+                        <p>Chicken vs Egg</p>
+                        <video controls muted controlsList="nodownload">
+                            <source src="animation_render_outputs/with_voice_or_lip_sync/chicken_vs_egg.mp4" alt="chicken_vs_egg" type="video/mp4">
+                        </video>
+                    </div>
+                        <div class="portfolio-item">
+                            <p>Pose Animations</p>
+                            <video controls muted controlsList="nodownload">
+                                <source src="animation_render_outputs/with_voice_or_lip_sync/pose_animations.mp4" alt="pose_animations" type="video/mp4">
+                            </video>
+                        </div>
+                            <div class="portfolio-item">
+                                <p>Having Coffee</p>
+                                <video controls muted controlsList="nodownload">
+                                    <source src="animation_render_outputs/with_voice_or_lip_sync/having_coffee.mp4" alt="having_coffee" type="video/mp4">
+                                </video>
+                            </div>
+                            </div>
+
+                            <h2>Blender Animations</h2>
+                            <h4>(Without Voice or Lip Sync)</h4>
+                            <h5>Portrait</h5>
+                <div class="portfolio-items">
+                    <div class="portfolio-item">
+                        <p>3 Animations in 1</p>
+                        <video controls muted controlsList="nodownload"> <!--controlsList="nodownload nofullscreen noremoteplayback"> -->
+                            <source src="animation_render_outputs/without_voice/3_animations_in_1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                        <div class="portfolio-item">
+                            <p>Bouncing Ball</p>
+                            <video controls muted controlsList="nodownload"> 
+                                <source src="animation_render_outputs/without_voice/bouncing_ball.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                            <div class="portfolio-item">
+                                <p>Ellie Picks Up an Object</p>
+                                <video controls muted controlsList="nodownload"> <!--controlsList="nodownload nofullscreen noremoteplayback"> -->
+                                    <source src="animation_render_outputs/without_voice/ellie_picks_up_an_object.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="portfolio-item">
+                                <p>Pose</p>
+                                <video controls muted controlsList="nodownload"> <!--controlsList="nodownload nofullscreen noremoteplayback"> -->
+                                    <source src="animation_render_outputs/without_voice/pose.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="portfolio-item">
+                                <p>Shift Body & LookLeft and Right</p>
+                                <video controls muted controlsList="nodownload"> <!--controlsList="nodownload nofullscreen noremoteplayback"> -->
+                                    <source src="animation_render_outputs/without_voice/shift_body_and_look_left_and_right.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="portfolio-item">
+                                <p>Showing a Phone</p>
+                                <video controls muted controlsList="nodownload"> <!--controlsList="nodownload nofullscreen noremoteplayback"> -->
+                                    <source src="animation_render_outputs/without_voice/showing_a_phone.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            </div>
+                            <h2>Blender Animations</h2>
+                            <h4>(Without Voice or Lip Sync)</h4>
+                            <h5>Landscape</h5>
+                            <div class="portfolio-items">
+                                <div class="portfolio-item landscape">
+                                    <p>Walk Cycle</p>
+                                <video controls muted controlsList="nodownload"> <!--controlsList="nodownload nofullscreen noremoteplayback"> -->
+                                    <source src="animation_render_outputs/without_voice/walk_cycle.mp4" type="video/mp4">
+                                   </video>
+                            </div>
+                            <div class="portfolio-item landscape">
+                                <p>Javelin Throw</p>
+                                <video controls muted controlsList="nodownload"> <!--controlsList="nodownload nofullscreen noremoteplayback"> -->
+                                    <source src="animation_render_outputs/without_voice/javelin_throw.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            </div>
+                    <p>Click here for more details : <a href="https://github.com/ReighEX" target="_blank" rel="noopener noreferrer">
                         <button class="rounded-button"><i class="fa-brands fa-github"></i>Github</button>
                         </a></p>
-                </div>
             </div>
         </section>
 
@@ -136,6 +210,8 @@
         <!-- Footer content -->
     </footer>
     <script src="assets/scripts.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" rel="noopener noreferrer"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.js"></script>
 </body>
 </html>

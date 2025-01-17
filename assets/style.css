@@ -3,7 +3,14 @@ body {
     margin: 0;
     padding: 0;
 }
-
+img {
+    object-fit: cover;
+}
+img:empty {
+    background-color: #ccc;
+    content: 'Image not available';
+    text-align: center;
+}
 .center-text {
     text-align: center;
 }
@@ -11,15 +18,10 @@ body {
     margin-bottom: 20px;
 }
 .portfolio-items {
-    display: flex; /* Tetap menggunakan Flexbox */
-    flex-wrap: wrap; /* Agar elemen membungkus jika terlalu panjang */
-    justify-content: center; /* Atur elemen menjadi rata tengah */
-    gap: 20px; /* Jarak antar elemen tetap terjaga */
-    margin-bottom: 30px; /* Jarak tambahan di bawah gambar Blender */
-}
-.portfolio-item {
-    display: inline-block;
-    width: auto; /* Biarkan lebar gambar mengikuti ukuran asli */
+    display: flex;
+    flex-wrap: wrap; /* Elemen grid akan membungkus jika layar kecil */
+    justify-content: center; /* Elemen rata tengah */
+    gap: 20px; /* Jarak antar elemen */
 }
 .portfolio-item img {
     max-width: 100%; /* Pastikan gambar tetap responsif */
@@ -29,7 +31,12 @@ body {
 .portfolio-item button {
     margin-top: 10px; /* Jarak tombol dari elemen sebelumnya */
 }
-
+.portfolio-item video {
+    width: 250px; /* Tetapkan lebar video */
+    margin-bottom: 10px; /* Jarak antara video dan teks */
+    border: 1px solid #ccc; /* Opsional: tambahkan border untuk estetika */
+    border-radius: 4px; /* Opsional: buat sudut melengkung */
+}
 #portfolio .portfolio-item.center-content {
     display: flex;
     flex-direction: column;
@@ -39,7 +46,24 @@ body {
     margin: 0 auto; /* Memastikan elemen berada di tengah */
     width: fit-content; /* Ukuran menyesuaikan konten */
 }
+#portfolio .portfolio-item.landscape {
+    display: flex;
+    flex-direction: column; /* Pastikan elemen-elemen di dalam landscape sejajar secara horizontal */
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Jarak antar elemen */
+}
 
+#portfolio .portfolio-item.landscape img, 
+#portfolio .portfolio-item.landscape video {
+    max-width: 100%; /* Sesuaikan ukuran media agar tidak melebihi lebar */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#portfolio .portfolio-item.landscape p {
+    text-align: center; /* Pastikan keterangan teks di tengah */
+}
 .github-details {
     display: flex; /* Mengatur elemen anak dalam satu baris */
     align-items: center; /* Menyelaraskan teks dan tombol secara vertikal */
@@ -100,17 +124,25 @@ body {
     transform: translateY(-50%);
     z-index: 1;
 }
-
+.modal-btn:hover {
+    color: #bbb; /* Warna berubah saat hover */
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+video {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 #prevBtn {
     left: 10px; /* Posisi tombol panah kiri */
 }
 
 #nextBtn {
     right: 10px; /* Posisi tombol panah kanan */
-}
-
-.modal-btn:hover {
-    color: #bbb; /* Warna berubah saat hover */
 }
 
 .close {
@@ -286,6 +318,10 @@ li {
     }
     .contact-list li, .portfolio-item {
         margin: 10px 0;
+    }
+    .portfolio-item img, .portfolio-item video {
+        width: 100%;
+        height: auto;
     }
 }
 
