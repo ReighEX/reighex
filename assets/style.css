@@ -2,6 +2,11 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #ebebeb !important; /* Ganti latar belakang menjadi #ebebeb */
+}
+hr {
+    border: 1px solid #000; /* Menambahkan border berwarna hitam */
+    margin: 20px 0; /* Memberikan jarak atas dan bawah */
 }
 img {
     object-fit: cover;
@@ -27,6 +32,9 @@ img:empty {
     max-width: 100%; /* Pastikan gambar tetap responsif */
     height: auto;
     margin-bottom: 10px; /* Jarak antara gambar dan tombol */
+}
+button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 .portfolio-item button {
     margin-top: 10px; /* Jarak tombol dari elemen sebelumnya */
@@ -68,8 +76,8 @@ img:empty {
     display: flex; /* Mengatur elemen anak dalam satu baris */
     align-items: center; /* Menyelaraskan teks dan tombol secara vertikal */
     gap: 10px; /* Jarak antara teks dan tombol */
+    margin-top: 20px; /* Atur jarak sesuai kebutuhan Anda */ 
 }
-
 .github-details a {
     display: inline-block; /* Memastikan tombol tetap inline */
 }
@@ -92,7 +100,9 @@ img:empty {
     background-color: rgb(0,0,0); /* Warna latar belakang */
     background-color: rgba(0,0,0,0.9); /* Transparansi */
 }
-
+.modal:focus {
+    outline: none;
+}
 .modal-content {
     margin: auto;
     display: block;
@@ -160,10 +170,6 @@ video {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
-}
-
-.github-details { 
-    margin-top: 20px; /* Atur jarak sesuai kebutuhan Anda */ 
 }
 
 #portfolio .portfolio-item img {
@@ -306,7 +312,19 @@ li {
 .contact-list li, .portfolio-item {
     margin: 10px 0; /* Berlaku untuk semua layar */
 }
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.6s ease-out forwards;
+}
 /* Untuk layar kecil (ponsel) */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 @media (max-width: 767px) {
     .contact-list, .portfolio-items, .center-content {
         display: flex;
